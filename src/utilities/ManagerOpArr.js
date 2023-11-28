@@ -35,28 +35,29 @@ function ManageOpArr(opArr, button, memoryVal, setMemoryVal) {
           }
           break;
         case "memory":
-            switch(newVal){
-                case "Memory Save":
-                    setMemoryVal(StrToNum(opArr[0]));
-                    result = StrToNum(opArr[0]);
-                    break;
-                case "Memory Clear":
-                    setMemoryVal(0)
-                    result = StrToNum(opArr[0]);
-                    break;
-                case "Memory Recall": 
-                    result = StrToNum(memoryVal);
-                    opArr[0] = StrToNum(memoryVal);
-                    break;
-                case "Memory Subtract":
-                    result = StrToNum(opArr[0]) - StrToNum(memoryVal);
-                    opArr[0] = result;
-                    break;
-                case "Memory Addition":
-                    result = StrToNum(opArr[0]) + StrToNum(memoryVal);
-                    opArr[0] = toString(result);
-            }
-            break;
+          console.log("memoryVal: ", memoryVal);
+          switch (newVal) {
+            case "Memory Save":
+              setMemoryVal(StrToNum(opArr[0]));
+              result = StrToNum(opArr[0]);
+              break;
+            case "Memory Clear":
+              setMemoryVal(0);
+              result = StrToNum(opArr[0]);
+              break;
+            case "Memory Recall":
+              result = StrToNum(memoryVal);
+              opArr[0] = StrToNum(memoryVal);
+              break;
+            case "Memory Subtract":
+              result = StrToNum(opArr[0]) - StrToNum(memoryVal);
+              opArr[0] = result;
+              break;
+            case "Memory Addition":
+              result = StrToNum(opArr[0]) + StrToNum(memoryVal);
+              opArr[0] = toString(result);
+          }
+          break;
         default:
           break;
       }

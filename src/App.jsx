@@ -21,6 +21,7 @@ function App() {
 
   // Function that manages operations
   const manageOpArr = () => {
+    console.log("manageOpArr called");
     // Create an array with both operands and operator
     let opArr = [oprnd1, oprtr, oprnd2];
     // Call Manage Operations function
